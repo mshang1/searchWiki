@@ -1,0 +1,22 @@
+<nav class="nav">
+  <a routerLink="/history">History</a>
+</nav>
+
+<div> 
+  <input type="text" [(ngModel)] = "searchText">
+</div>
+
+<button (click)="searchWiki(searchText.value)">Search Wiki</button>
+<div *ngFor="let item of searchList">
+  {{item.title}}
+  <!-- {{item.timestamp}} -->
+</div>
+
+<button (click)="searchGiphy(searchText.value)">Search Giphy</button>
+
+<div *ngFor="let giphyItem of searchGiphyList">
+<img src={{giphyItem.images.fixed_height_downsampled.url}}>
+</div>
+
+<router-outlet></router-outlet>
+

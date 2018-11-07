@@ -1,0 +1,21 @@
+
+<button (click)="getHistory()">Get History</button>
+
+<div>
+    Here shows the search history:
+</div>
+
+<div></div>
+
+<div *ngFor="let historyResult of historyResults">
+    Searched {{historyResult}}
+</div>
+
+<!-- <div *ngFor="let hisTime of historyTime">
+    At {{hisTime.timestamp}}
+
+</div> -->
+
+<div>
+<button (click)="back()">Go Back</button>
+</div>
